@@ -4,19 +4,32 @@
     box-sizing: border-box;
 }
 
-html , body{
+html , body, #back{
     height: 100%;
     width: 100%;
 }
 
-#carouselExampleControls , .carousel-inner , .carousel-item {
-    height: 100%;
-    width: 100%;
-    background-color: blue;
+.nav-tabs{
+    height: 200%;
+    width: 16%;
+    padding-left: 30px;
+    background-color: #fff;
 }
 
-.container {
+#carouselControls  {
+    height: 100%;
+    width: 80%;
+}
+.carousel-items , .carousel-inner {
+    min-height: 100%;
+    width: 100%;
+}
+#container {
+    max-height: 200%;
+    width: 96%;
     display: flex;
+    justify-content: space-between;
+    background-color:#EEF1F8;
 }
 
 #profile{
@@ -24,4 +37,83 @@ html , body{
     width: 40px;
     border-radius: 50%;
     background-size: cover;
+}
+
+.col-md-9 {
+    flex: 0 0 auto;
+    width: 50%;
+}
+
+#detail p {
+    margin: 0%;
+}
+
+.productContainer{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    padding: 2%;
+    background-color: #fff;
+}
+table {
+    border: none;
+    border-spacing: 1em;
+}
+
+.navbar {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+#links{
+    display: flex;
+    width: 40%;
+    justify-content: space-evenly;
+}
+
+.btn-link{
+    text-decoration: none;
+}
+
+.productNav{
+    width: 100%;
+}
+
+#search {
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: 100;
+    text-decoration: inherit;
+  padding: 5px;
+  font-size: 18px;
+  line-height:24px;
+  color: rgb(146, 141, 141);
+  border:1px solid rgb(179, 178, 178);
+  border-radius:4px;
+}
+
+.navTabs{
+    height: 60px;
+}
+
+.col-md-8 {
+    flex: 0 0 auto;
+    width: 100%;
+}
+
+.Imgcontainer{
+    height: 100%;
+    width: 100%;
+}
+
+th p{
+    padding: 8px;
+}
+
+caption {
+    color: black;
+    font-weight: 700;
+    font-size: 20px;
 }

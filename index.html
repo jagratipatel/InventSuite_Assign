@@ -1,143 +1,472 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <title>Hello, world!</title>
-  </head>
-  <body>
-    <div id="carouselExampleControls" class="carousel slide">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container-fluid">
-                  <a class="navbar-brand" href="#">InventSuite</a>
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 
- <!-- nav tabs  -->
-    <ul class="nav justify-content-end">
-    <li>
-      <input class="form-control" type="text" placeholder="Search" aria-label="default input example">
-    </li>
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-        Dropdown
-      </a>
-      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <li><a class="dropdown-item" href="#">Action</a></li>
-        <li><a class="dropdown-item" href="#">Another action</a></li>
-        <li><hr class="dropdown-divider"></li>
-        <li><a class="dropdown-item" href="#">Something else here</a></li>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <title>InventSuite</title>
+  <script src="https://kit.fontawesome.com/dea87d66d7.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div id="back">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">InventSuite</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- nav tabs  -->
+        <ul class="nav" id="links">
+          <li>
+            <div id="search">Search &emsp;&emsp;&emsp;&emsp;&emsp;<span class="fas fa-search"></span></div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <img src="https://img.icons8.com/fluent-systems-filled/24/000000/appointment-reminders.png" />
+          </li>
+          <li>
+            <img id="profile" src="./isabell.jpg">
+          </li>
+        </ul>
+
+      </div>
+    </nav>
+    <div id="container">
+      <ul class="nav flex-column nav-tabs">
+        <li class="nav-item navTabs">
+          <a class="nav-link" aria-current="page" href="#"><img
+              src="https://img.icons8.com/material/24/000000/home.png" /> &emsp;Home </a>
+        </li>
+        <li class="nav-item navTabs">
+          <a class="nav-link" href="#"><img src="https://img.icons8.com/fluent-systems-filled/24/000000/buy.png" />
+            &emsp; Order </a>
+        </li>
+        <li class="nav-item navTabs">
+          <a class="nav-link active" href="#"><img
+              src="https://img.icons8.com/material-rounded/24/000000/shipping-product.png" />
+            &emsp;Product </a>
+        </li>
+        <li class="nav-item navTabs">
+          <a class="nav-link" href="#"><img
+              src="https://img.icons8.com/material/24/000000/group-foreground-selected.png" />
+            &emsp;Costomers </a>
+        </li>
+        <li class="nav-item navTabs">
+          <a class="nav-link" href="#"><img src="https://img.icons8.com/ios-filled/24/000000/warehouse-1.png" />
+            &emsp; Warehouse </a>
+        </li>
       </ul>
-    </li>
-    <li class="nav-item">
-      <img src="https://img.icons8.com/fluent-systems-filled/24/000000/appointment-reminders.png"/>
-    </li>
-    <li>
-      <img  id="profile" src="./isabell.jpg">
-    </li>
-  </ul>
-                
+      <div id="carouselControls" class="carousel slide ">
+        <div class="carousel-inner">
+          <div class="carousel-item">
+            <div class="productContainer">
+              <nav class="navbar navbar-expand-lg navbar-light productNav">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#">Product</a>
+                  <div id="search">Search &emsp;&emsp;&emsp;&emsp;&emsp;<span class="fas fa-search"></span></div>
+                  <ul class="nav ">
+                    <li>
+                      <div class="d-grid gap-2 d-md-block">
+                        <button class="btn btn-light" type="button">Filter <img
+                            src="https://img.icons8.com/metro/16/000000/filter.png" /></button>
+                        <button class="btn btn-light" type="button">Sort <img
+                            src="https://img.icons8.com/small/16/000000/sorting-arrows.png" /></button>
+                      </div>
+                    </li>
+                    <li><button type="button" class="btn btn-link">+Add Product</button></li>
+                  </ul>
                 </div>
               </nav>
-        <div class="container">
-            <ul class="nav flex-column">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#"><img src="https://img.icons8.com/material/24/000000/home.png"/> Home </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#"><img src="https://img.icons8.com/fluent-systems-filled/24/000000/buy.png"/> Order </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#"><img src="https://img.icons8.com/material-rounded/24/000000/shipping-product.png"/> Product </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#"><img src="https://img.icons8.com/material/24/000000/group-foreground-selected.png"/> Costomers </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#"><img src="https://img.icons8.com/ios-filled/24/000000/warehouse-1.png"/> Warehouse </a>
-                </li>
-              </ul>
-              <div class="productContainer"> 
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <div class="container-fluid">
-                      <a class="navbar-brand" href="#">Navbar</a>
-                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                      </button>
-                      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <form class="d-flex">
-                          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                          <button class="btn btn-outline-success" type="submit">Search</button>
-                        </form>
-                      </div>
-                    </div>
-                  </nav>
-               <table class="table">
+              <table class="table ">
                 <thead class="table-light">
-                    <tr>
-                        <th scope="col"><div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
-                          </div></th>
-                        <th scope="col">Product</th>
-                        <th scope="col">Inventory</th>
-                        <th scope="col">Type</th>
-                        <th scope="col">Brand</th>
-                        <th scope="col">Date Added</th>
-                        <th scope="col">Selling Price</th>          
-                        <th scope="col">vendor</th>
-                        <th scope="col">Action</th>                                      
-                      </tr>
+                  <tr>
+                    <th scope="col">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                      </div>
+                    </th>
+                    <th scope="col">Product</th>
+                    <th scope="col">Inventory</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Brand</th>
+                    <th scope="col">Date Added</th>
+                    <th scope="col">Selling Price</th>
+                    <th scope="col">vendor</th>
+                    <th scope="col">Action</th>
+                  </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Shoe</td>
-                        <td>Puma</td>
-                        <td>12 Aug 2020</td>
-                        <td>200Rs</td>
-                        <td>Swasth India</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2</th>
-                        <td>Shoe</td>
-                        <td>Puma</td>
-                        <td>12 Aug 2020</td>
-                        <td>200Rs</td>
-                        <td>Swasth India</td>
-                      </tr>
-                      <tr>
-                        <th scope="row">3</th>
-                        <td>Shoe</td>
-                        <td>Puma</td>
-                        <td>12 Aug 2020</td>
-                        <td>200Rs</td>
-                        <td>Swasth India</td>
-                      </tr>
+                  <tr>
+                    <th scope="row">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                        </div< /th>
+                    <td class="d-flex"> <img id="profile" src="./isabell.jpg">
+                      <div id="detail">
+                        <p>Puma Sports Shoe white</p> <span>#2000312</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div id="detail">
+                        <p>30 InStock</p><span>4 variant</span>
+                      </div>
+                    </td>
+                    <td>Shoe</td>
+                    <td>Puma</td>
+                    <td>12 Aug 2020</td>
+                    <td>200Rs</td>
+                    <td>Swasth India</td>
+                    <td><img src="https://img.icons8.com/color/12/000000/menu-2.png" /></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                        </div< /th>
+                    <td class="d-flex"> <img id="profile" src="./isabell.jpg">
+                      <div id="detail">
+                        <p>Puma Sports Shoe white</p> <span>#2000312</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div id="detail">
+                        <p>30 InStock</p><span>4 variant</span>
+                      </div>
+                    </td>
+                    <td>Shoe</td>
+                    <td>Puma</td>
+                    <td>12 Aug 2020</td>
+                    <td>200Rs</td>
+                    <td>Swasth India</td>
+                    <td><img src="https://img.icons8.com/color/12/000000/menu-2.png" /></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                        </div< /th>
+                    <td class="d-flex"> <img id="profile" src="./isabell.jpg">
+                      <div id="detail">
+                        <p>Puma Sports Shoe white</p> <span>#2000312</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div id="detail">
+                        <p>30 InStock</p><span>4 variant</span>
+                      </div>
+                    </td>
+                    <td>Shoe</td>
+                    <td>Puma</td>
+                    <td>12 Aug 2020</td>
+                    <td>200Rs</td>
+                    <td>Swasth India</td>
+                    <td><img src="https://img.icons8.com/color/12/000000/menu-2.png" /></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                        </div< /th>
+                    <td class="d-flex"> <img id="profile" src="./isabell.jpg">
+                      <div id="detail">
+                        <p>Puma Sports Shoe white</p> <span>#2000312</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div id="detail">
+                        <p>30 InStock</p><span>4 variant</span>
+                      </div>
+                    </td>
+                    <td>Shoe</td>
+                    <td>Puma</td>
+                    <td>12 Aug 2020</td>
+                    <td>200Rs</td>
+                    <td>Swasth India</td>
+                    <td><img src="https://img.icons8.com/color/12/000000/menu-2.png" /></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                        </div< /th>
+                    <td class="d-flex"> <img id="profile" src="./isabell.jpg">
+                      <div id="detail">
+                        <p>Puma Sports Shoe white</p> <span>#2000312</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div id="detail">
+                        <p>30 InStock</p><span>4 variant</span>
+                      </div>
+                    </td>
+                    <td>Shoe</td>
+                    <td>Puma</td>
+                    <td>12 Aug 2020</td>
+                    <td>200Rs</td>
+                    <td>Swasth India</td>
+                    <td><img src="https://img.icons8.com/color/12/000000/menu-2.png" /></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                        </div< /th>
+                    <td class="d-flex"> <img id="profile" src="./isabell.jpg">
+                      <div id="detail">
+                        <p>Puma Sports Shoe white</p> <span>#2000312</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div id="detail">
+                        <p>30 InStock</p><span>4 variant</span>
+                      </div>
+                    </td>
+                    <td>Shoe</td>
+                    <td>Puma</td>
+                    <td>12 Aug 2020</td>
+                    <td>200Rs</td>
+                    <td>Swasth India</td>
+                    <td><img src="https://img.icons8.com/color/12/000000/menu-2.png" /></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+                        </div< /th>
+                    <td class="d-flex"> <img id="profile" src="./isabell.jpg">
+                      <div id="detail">
+                        <p>Puma Sports Shoe white</p> <span>#2000312</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div id="detail">
+                        <p>30 InStock</p><span>4 variant</span>
+                      </div>
+                    </td>
+                    <td>Shoe</td>
+                    <td>Puma</td>
+                    <td>12 Aug 2020</td>
+                    <td>200Rs</td>
+                    <td>Swasth India</td>
+                    <td><img src="https://img.icons8.com/color/12/000000/menu-2.png" /></td>
+                  </tr>
                 </tbody>
-              </table></div>
-        </div>
+              </table>
+            </div>
           </div>
-          <div class="carousel-item">
-          </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </a>
-      </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+          <div class="carousel-item active">
+            <div class="col-md-9">
+              <div class="card">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-3 border-right">
+                      <label for="text" class="col-12 col-form-label"><i class="fas fa-chevron-left"></i>
+                        Product</label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-3 border-right">
+                      <h4>Add Product</h4>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-8">
+                      <form>
+                        <div class="form-group row">
+                          <label for="text" class="col-12 col-form-label">Product Name</label>
+                          <div class="col-12">
+                            <input id="text" name="text" class="form-control here" required="required" type="text">
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label for="textarea" class="col-12 col-form-label">Discription</label>
+                          <div class="col-12">
+                            <textarea id="textarea" name="textarea" cols="40" rows="5" class="form-control"></textarea>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="thumbnail">
+                        <a href="./alex-hu-at7tuZ_6OlY-unsplash.jpg">
+                          <img src="./alex-hu-at7tuZ_6OlY-unsplash.jpg" alt="Lights" style="width:100%">
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="thumbnail">
+                        <a href="./c-d-x-PDX_a_82obo-unsplash.jpg">
+                          <img src="./c-d-x-PDX_a_82obo-unsplash.jpg" alt="Lights" style="width:100%">
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="thumbnail">
+                        <a href="./curology-wK0h-mlvfuc-unsplash.jpg">
+                          <img src="./curology-wK0h-mlvfuc-unsplash.jpg" alt="Lights" style="width:100%">
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="thumbnail">
+                        <a href="./imani-bahati-LxVxPA1LOVM-unsplash.jpg">
+                          <img src="./imani-bahati-LxVxPA1LOVM-unsplash.jpg" alt="Lights" style="width:100%">
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="thumbnail">
+                        <a href="./isabell.jpg">
+                          <img src="./isabell.jpg" alt="Nature" style="width:100%">
+                        </a>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="thumbnail">
+                        <a href="./icons8-image-30.png">
+                          <img src="./icons8-image-30.png" alt="Fjords" style="width:100%">
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">SKU(Stock Keeping Unit)</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Barcode (ISBN,UPCGTIN,etc.)</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1">
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
 
-  </body>
+                  <table class="table table-borderless caption-top">
+                    <caption>Variants Details</caption>
+                    <thead class="table-light">
+                      <tr>
+                        <th scope="col">Variants</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Vendor</th>
+                        <th scope="col">Quantity</th>
+                        <th scope="col">SKU</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row" class="d-flex"><img id="profile" src="./isabell.jpg">
+                          <p>44</p>
+                        </th>
+                        <td><input type="text" class="form-control" id="inputtext2"></td>
+                        <td><input type="text" class="form-control" id="inputtext2"></td>
+                        <td>
+                          <div class="dropdown">
+                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                              data-bs-toggle="dropdown" aria-expanded="false">
+                              Quantity
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                              <li><a class="dropdown-item" href="#">1</a></li>
+                              <li><a class="dropdown-item" href="#">2</a></li>
+                              <li><a class="dropdown-item" href="#">3</a></li>
+                              <li><a class="dropdown-item" href="#">4</a></li>
+                            </ul>
+                          </div>
+                        </td>
+                        <td><input type="text" class="form-control" id="inputtext2"></td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="d-flex"><img id="profile" src="./isabell.jpg">
+                          <p>44</p>
+                        </th>
+                        <td><input type="text" class="form-control" id="inputtext2"></td>
+                        <td><input type="text" class="form-control" id="inputtext2"></td>
+                        <td>
+                          <div class="dropdown">
+                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                              data-bs-toggle="dropdown" aria-expanded="false">
+                              Quantity
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                              <li><a class="dropdown-item" href="#">1</a></li>
+                              <li><a class="dropdown-item" href="#">2</a></li>
+                              <li><a class="dropdown-item" href="#">3</a></li>
+                              <li><a class="dropdown-item" href="#">4</a></li>
+                            </ul>
+                          </div>
+                        </td>
+                        <td><input type="text" class="form-control" id="inputtext2"></td>
+                      </tr>
+                      <tr>
+                        <th scope="row" class="d-flex"><img id="profile" src="./isabell.jpg">
+                          <p>44</p>
+                        </th>
+                        <td><input type="text" class="form-control" id="inputtext2"></td>
+                        <td><input type="text" class="form-control" id="inputtext2"></td>
+                        <td>
+                          <div class="dropdown">
+                            <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
+                              data-bs-toggle="dropdown" aria-expanded="false">
+                              Quantity
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                              <li><a class="dropdown-item" href="#">1</a></li>
+                              <li><a class="dropdown-item" href="#">2</a></li>
+                              <li><a class="dropdown-item" href="#">3</a></li>
+                              <li><a class="dropdown-item" href="#">4</a></li>
+                            </ul>
+                          </div>
+                        </td>
+                        <td><input type="text" class="form-control" id="inputtext2"></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="rightNav"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+    </script>
+
+</body>
+
 </html>
