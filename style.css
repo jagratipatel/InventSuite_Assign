@@ -10,26 +10,35 @@ html , body, #back{
 }
 
 .nav-tabs{
-    height: 200%;
-    width: 16%;
+    height: inherit;
+    width: 20%;
     padding-left: 30px;
     background-color: #fff;
 }
 
+#container {
+    width: 98%;
+    display: flex;
+    background-color:#EEF1F8;
+}
+
 #carouselControls  {
     height: 100%;
-    width: 80%;
+    width: 100%;
 }
 .carousel-items , .carousel-inner {
     min-height: 100%;
     width: 100%;
 }
-#container {
-    max-height: 200%;
-    width: 96%;
-    display: flex;
-    justify-content: space-between;
-    background-color:#EEF1F8;
+
+
+.col-md-9 {
+    flex: 0 0 auto;
+    width: 60%;
+}
+
+.rightNav{
+    width: 32%;
 }
 
 #profile{
@@ -37,11 +46,6 @@ html , body, #back{
     width: 40px;
     border-radius: 50%;
     background-size: cover;
-}
-
-.col-md-9 {
-    flex: 0 0 auto;
-    width: 50%;
 }
 
 #detail p {
@@ -117,3 +121,48 @@ caption {
     font-weight: 700;
     font-size: 20px;
 }
+
+.variant{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card{
+    margin-top: 20px;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: rgb(48, 47, 47);
+    padding: 5px;
+  }
+
+  #foot{
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+  }
+
+  .btn-hover:hover{
+      transform: scale(1.01);
+      background: rgb(171, 175, 177);
+  }
+
+  .carousel-item{
+      justify-content: space-evenly;
+  }
+
+  .input-group-addon.success {
+      width: 70px;
+      text-align: center;
+      line-height: 30px;
+    border-color: rgb(76, 77, 76);
+  }
+
+  label{
+      padding: 6px;
+  }
